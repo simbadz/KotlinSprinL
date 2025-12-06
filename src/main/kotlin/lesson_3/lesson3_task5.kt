@@ -3,13 +3,10 @@ package org.example.lesson_3
 fun main() {
     val receivingMove: String = "D2-D4;0"
 
-    val separate = receivingMove.split(';')
-    val movePart = separate[0]
-    val numberPart = separate[1]
-
-    val position = movePart.split('-')
-    val fromWhere = position[0]
-    val where = position[1]
+    val separate = receivingMove.split('-',';')
+    val fromWhere = separate[0]
+    val where = separate[1]
+    val numberPart = separate[2]
 
     println("From where: $fromWhere")
     println("Where: $where")
